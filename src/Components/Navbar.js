@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
+import weatherIcon from "../weather_icon.png";
 function Navbar(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <a className="navbar-brand" href="/">
           <img
-            src="/weather_icon.png"
+            src={weatherIcon}
             width="30"
             height="30"
             className="d-inline-block align-top"

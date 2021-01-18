@@ -10,6 +10,7 @@ function About() {
             <a
               href="https://openweathermap.org/api"
               target="_blank"
+              rel="noreferrer"
               className="stretched-link"
             >
               here

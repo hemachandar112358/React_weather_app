@@ -81,8 +81,8 @@ class WeatherApp extends Component {
 
   render() {
     return (
-      <div className="container-md">
-        <form style={{ marginTop: "10%" }}>
+      <div className="container-md col-md-5">
+        <form style={{ marginTop: "10%" }} onSubmit={this.handleClick}>
           <div className="form-group">
             <input
               onChange={this.handleChange}
@@ -94,11 +94,7 @@ class WeatherApp extends Component {
           </div>
           <div class="form-row">
             <div class="col">
-              <button
-                type="button"
-                className="btn btn-light mr-5 btn-block"
-                onClick={this.handleClick}
-              >
+              <button type="submit" className="btn btn-success mr-5 btn-block">
                 Submit
               </button>
               {/* <button
@@ -113,14 +109,16 @@ class WeatherApp extends Component {
         </form>
 
         <React.Fragment>{this.state.loading}</React.Fragment>
-        {this.state.resCode === 200 ? (
-          <WeatherCard
-            data={this.state.data}
-            temperature={this.state.temperature}
-          />
-        ) : (
-          <div style={{ marginTop: "50px" }}>{this.state.error}</div>
-        )}
+        <div className="col-md-" style={{ marginLeft: "0%" }}>
+          {this.state.resCode === 200 ? (
+            <WeatherCard
+              data={this.state.data}
+              temperature={this.state.temperature}
+            />
+          ) : (
+            <div style={{ marginTop: "50px" }}>{this.state.error}</div>
+          )}
+        </div>
       </div>
     );
   }

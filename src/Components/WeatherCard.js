@@ -1,6 +1,6 @@
 function WeatherCard(props) {
   return (
-    <div className="container" style={{ marginTop: "5%", marginLeft: "25%" }}>
+    <div className="container" style={{ marginTop: "5%" }}>
       <div className="card" style={{ width: "40rem" }}>
         <div className="card-body">
           <h5 className="card-title">Current Weather</h5>
